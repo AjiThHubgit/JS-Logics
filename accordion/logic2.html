@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+<head>
+    <title>AngularJS Accordion</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <style>
+        .accordion {
+            width: 100%;
+        }
+
+        .accordion-item {
+            border: 1px solid #ccc;
+            margin-bottom: 5px;
+        }
+
+        .accordion-header {
+            background-color: #f2f2f2;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .accordion-content {
+            padding: 10px;
+            display: none;
+        }
+
+        .accordion-item.active .accordion-content {
+            display: block;
+        }
+    </style>
+</head>
+
+<body ng-controller="myCtrl">
+
+    <div class="accordion" ng-repeat="item in accordionItems">
+        <div class="accordion-item" ng-class="{ 'active': item.isOpen }">
+            <div class="accordion-header" ng-click="toggleAccordion(item)">{{ item.title }}</div>
+            <div class="accordion-content">{{ item.content }}</div>
+        </div>
+    </div>
+
+    <button ng-click="addAccordion()">Add Accordion</button>
+
+    <script>
+        var app = angular.module('myApp', []);
+
+        app.controller('myCtrl', function ($scope) {
+            $scope.accordionItems = [];
+
+            // Function to add a new accordion
+            $scope.addAccordion = function () {
+                var newItem = {
+                    title: 'New Header',
+                    content: 'New Content',
+                    isOpen: false
+                };
+
+                $scope.accordionItems.push(newItem);
+            };
+
+            $scope.toggleAccordion = function (selectedItem) {
+                $scope.accordionItems.forEach(function (item) {
+                    if (item !== selectedItem) {
+                        item.isOpen = false;
+                    }
+                });
+
+                selectedItem.isOpen = !selectedItem.isOpen;
+            };
+        });
+    </script>
+</body>
+
+</html>
