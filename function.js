@@ -14,9 +14,14 @@ let empWorkingDetails = {
 }
 
 function empWorkingBlockDetails(getEmpDetails, searchEmp) {
-    console.log(getEmpDetails, searchEmp);
-    
+    for (let blockName in getEmpDetails) {
+        console.log(getEmpDetails[blockName].length);
+        for (let i = 0; i < getEmpDetails[blockName].length; i++) {
+            console.log(getEmpDetails[blockName]);
+        }
+    }
 }
+
 let searchEmpWorkingDetails = 'mohan';
 empWorkingBlockDetails(empWorkingDetails, searchEmpWorkingDetails);
 
