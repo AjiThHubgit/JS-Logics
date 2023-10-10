@@ -68,7 +68,7 @@ let resJson = {
 for (let firstArray in resJson.jsonData.one) {
     for (let secondArray in resJson.jsonData.two) {
         if (resJson.jsonData.one[firstArray] === resJson.jsonData.two[secondArray]) {
-            resJson.duplicates.push(resJson.jsonData.one[firstArray])
+            resJson.duplicates.push(resJson.jsonData.one[firstArray]);
         }
     }
 }

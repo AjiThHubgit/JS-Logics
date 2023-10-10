@@ -13,13 +13,27 @@ let empWorkingDetails = {
     }
 }
 
+let result = [];
+
+
+
 function empWorkingBlockDetails(getEmpDetails, searchEmp) {
     for (let blockName in getEmpDetails) {
-        console.log(getEmpDetails[blockName].length);
-        for (let i = 0; i < getEmpDetails[blockName].length; i++) {
-            console.log(getEmpDetails[blockName]);
+        for (let unit in getEmpDetails[blockName]) {
+            for (let i = 0; i < getEmpDetails[blockName][unit].length; i++) {
+                if (searchEmp == getEmpDetails[blockName][unit][i]) {
+                    result.push(
+                        {
+                            'block': blockName,
+                            'unit': unit
+                        }
+                    )
+                }
+            }
         }
     }
+
+    console.log(result, 'result');
 }
 
 let searchEmpWorkingDetails = 'mohan';

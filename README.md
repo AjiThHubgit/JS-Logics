@@ -7,3 +7,7 @@ https://www.freecodecamp.org/news/master-the-art-of-looping-in-javascript-with-t
 2. functions
 
 https://www.javascripttutorial.net/javascript-function/ 
+
+3. Array Functions
+
+https://javascript.plainenglish.io/javascript-array-functions-your-ultimate-guide-958cd7947d92 
