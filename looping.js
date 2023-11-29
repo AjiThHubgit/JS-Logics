@@ -24,6 +24,8 @@ console.log(Object.keys(person));
 let getKey = Object.keys(person);
 let findLength = Object.keys(person).length;
 for (let i = 0; i < findLength; i++) {
+    // person.fname
+    // console.log(getKey[i]);
     console.log(person[getKey[i]], 'give person details');
 }
 
@@ -33,8 +35,8 @@ for (let x in person) {
     console.log(x, 'key');
     console.log(person[x], 'value');
 }
-*/
 
+*/
 
 /*
 let resJson = {
