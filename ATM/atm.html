@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ATM Machine</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+        .w-100 {
+            width: 100%;
+        }
+    </style>
+  </head>
+  <body>
+    
+
+    <div class="card" style="width: 300px;">
+        <div class="card-body">
+            <button type="button" class="btn btn-primary w-100 mb-2">Cash Withdraw</button>
+            <button type="button" class="btn btn-secondary w-100 mb-2" onclick="depositAmount()">Deposite Amount</button>
+            <button type="button" class="btn btn-success w-100 mb-2">Check Balance Amount</button>
+        </div>
+    </div>
+
+    <div class="show__deposit__details mt-5" style="width: 300px;">
+        <h3>Deposit Details</h3>
+        <div class="input-group mb-3">
+            <input type="number" class="form-control" placeholder="Enter Account Number" id="getAccountNumber">
+        </div>
+        <div class="input-group mb-3">
+            <input type="number" class="form-control" placeholder="Enter Amount" id="getAmountFromUser">
+        </div>
+        <button onclick="transferBankDetails()">Transfer Amount</button>
+    </div>
+
+    <div class="show__balance__details mt-5" style="width: 300px;">
+        <h3>Check Balance Amount</h3>
+        <div class="input-group mb-3">
+            <input type="number" class="form-control" placeholder="Enter Account Number" id="getAccountNumberForDisplayBal">
+        </div>
+        <button onclick="bankBankBalanceDetails()">Check Balance</button>
+    </div>
+
+    <script src="./AtmAmoutCalculation.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
