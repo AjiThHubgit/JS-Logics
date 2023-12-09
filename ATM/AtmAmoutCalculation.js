@@ -3,6 +3,7 @@ function initializeATMMachine() {
 
     // Step 1: Retrieve the JSON string from local storage and parse it back to an object
     let storedData = localStorage.getItem('atmMachineData');
+    console.log(storedData);
     let atmMachine;
 
     if (storedData) {
@@ -99,6 +100,7 @@ function cashWithDrawDetails() {
     
     let getAccountNumberForWithDraw = document.getElementById('getAccountNumberForWithDraw').value;
     let getAmountFromUserForWithDraw = document.getElementById('getAmountFromUserForWithDraw').value;
+    
     if (atmMachineDetails.deposit_details.length === 0) {
         console.log('There is no bank details. please desposit amount then withdraw your cash ..');
     } else if (atmMachineDetails.deposit_details.length > 0 && checkBankDetailsExistOrNot(getAccountNumberForWithDraw)) {
