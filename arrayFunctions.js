@@ -56,3 +56,4 @@ console.log(spliceArr, 'splice');
 Reference :
 https://stackoverflow.com/questions/5767325/how-can-i-remove-a-specific-item-from-an-array-in-javascript 
 */
+
