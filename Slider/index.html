@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-...your-sha-hash-here..." crossorigin="anonymous" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        .slider__header,
+        .slider__content,
+        .slider_footer {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .slider__dot {
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background-color: #D9D9D9;
+        }
+
+        .w-100 {
+            width: 100%;
+        }
+
+        .w-60 {
+            width: 60%;
+            margin: 0 auto;
+        }
+
+        .w-40 {
+            width: 40%;
+        }
+
+        .slider__slide {
+            margin: 20px 30px;
+        }
+    </style>
+</head>
+
+<body ng-app="myApp" ng-controller="MyController">
+
+    <div class="slider__container w-60">
+
+        <div class="slider__header w-100" style="text-align: center;">
+            <p class="w-40">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec justo quis urna
+                bibendum eleifend. Curabitur maximus elit.</p>
+        </div>
+
+        <div class="slider__content">
+
+            <div class="slider__arrow" ng-click="previousSlide()">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+
+            <div class="slider__slide" ng-if="sliderObj.displaySlide === 1">
+                <img src="./ezgif 1.png" alt="" style="width: 500px;height: 300px;">
+            </div>
+
+            <div class="slider__slide" ng-if="sliderObj.displaySlide === 2">
+                <img src="./ezgif 2.png" alt="" style="width: 500px;height: 300px;">
+            </div>
+
+            <div class="slider__arrow" ng-click="nextSlide()">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+
+        </div>
+
+        <div class="slider_footer" style="gap: 10px;">
+            <div class="slider__dot" ng-style="{'background-color': sliderObj.displaySlide === 1 ? sliderObj.active : sliderObj.inactive}"
+                ng-click="displaySlider(1)"></div>
+            <div class="slider__dot" ng-style="{'background-color': sliderObj.displaySlide === 2 ? sliderObj.active : sliderObj.inactive}"
+                ng-click="displaySlider(2)"></div>
+        </div>
+
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

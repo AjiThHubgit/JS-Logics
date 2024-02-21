@@ -11,3 +11,7 @@ https://www.javascripttutorial.net/javascript-function/
 3. Array Functions
 
 https://javascript.plainenglish.io/javascript-array-functions-your-ultimate-guide-958cd7947d92 
+
+4. Array Methods
+
+https://dev.to/devsmitra/28-javascript-array-hacks-a-cheat-sheet-for-developer-5769 
